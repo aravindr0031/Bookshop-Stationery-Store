@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bookery - About Us</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="description" content="Warm literary layout showcasing book genres, stationery categories, and staff recommendations.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = { 
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'accent': '#d97706', /* Warm Amber */
+            'brand-dark': '#0F172A', /* Deep Midnight Blue/Black */
+            'brand-light': '#F8FAFC', /* Clean Slate White */
+            'brand-muted': '#64748B' /* Cool Gray */
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    [dir="rtl"] { direction: rtl; }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeInUp 0.8s ease-out; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-sans antialiased transition-colors duration-300 bg-brand-light dark:bg-brand-dark flex flex-col min-h-screen">
+
+  <nav class="bg-brand-light dark:bg-brand-dark fixed w-full top-0 z-50 border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-[90px]">
+
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex items-center gap-3">
+            <i class="fas fa-book-open text-amber-600 text-3xl"></i>
+            <div class="flex flex-col">
+              <span class="text-2xl font-serif font-bold tracking-tight text-brand-dark dark:text-brand-light">The <span class="text-amber-600 italic">Bookery</span></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="hidden xl:flex items-center justify-center flex-1 mx-8">
+          <div class="flex items-center gap-8">
+
+            <div class="relative group h-[90px] flex items-center">
+              <button class="text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors flex items-center">
+                <span class="relative py-2">
+                  Home
+                  <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+                </span>
+                <i class="fas fa-chevron-down text-[10px] ms-2 transition-transform duration-300 group-hover:rotate-180 py-2"></i>
+              </button>
+              
+              <div class="absolute top-[90px] start-0 w-56 bg-brand-light dark:bg-[#1E293B] border border-t-0 border-gray-200 dark:border-white/10 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 z-50">
+                <div class="py-4 px-6 flex flex-col gap-4">
+                  <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-accent dark:text-gray-400 dark:hover:text-accent transition-colors">HOME PAGE 01</a>
+                  <a href="home-2.html" class="text-sm font-medium text-gray-500 hover:text-accent dark:text-gray-400 dark:hover:text-accent transition-colors">HOME PAGE 02</a>
+                </div>
+              </div>
+            </div>
+            <a href="about.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-accent hover:text-accent transition-colors py-2">
+              About
+              <span class="absolute bottom-0 start-0 w-full h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            
+            <a href="books.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors py-2">
+              Books
+              <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            
+            <a href="stationery.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors py-2">
+              Stationery
+              <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            
+            <a href="book_categories.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors py-2">
+              Book Categories
+              <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            
+            <a href="contact.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors py-2">
+              Contact
+              <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+
+
+          </div>
+        </div>
+
+        <div class="hidden xl:flex items-center gap-4">
+          
+          <button id="theme-toggle" class="relative w-[72px] h-[34px] flex items-center bg-gray-200 dark:bg-[#1E293B] rounded-full p-1 transition-colors duration-300 focus:outline-none border border-gray-300 dark:border-gray-700 overflow-hidden" title="Toggle Theme">
+            <span class="text-[9px] font-medium text-gray-500 absolute end-2.5 dark:opacity-0 transition-opacity duration-300 tracking-wider">LIGHT</span>
+            <span class="text-[9px] font-medium text-accent absolute start-2.5 opacity-0 dark:opacity-100 transition-opacity duration-300 tracking-wider">DARK</span>
+            
+            <div class="w-[24px] h-[24px] bg-white dark:bg-brand-dark border border-gray-200 dark:border-gray-600 rounded-full shadow-sm transform transition-transform duration-300 flex items-center justify-center rtl:dark:-translate-x-[38px] ltr:dark:translate-x-[38px] dark:translate-x-[38px] z-10">
+              <i class="fas fa-sun text-[11px] text-accent dark:hidden block"></i>
+              <i class="fas fa-moon text-[11px] text-accent hidden dark:block"></i>
+            </div>
+          </button>
+          
+          <button id="rtl-toggle" class="text-xs font-medium text-gray-400 hover:text-accent transition-colors duration-300 ms-2" title="Toggle RTL">
+            RTL
+          </button>
+
+          <div class="h-8 w-px bg-gray-200 dark:bg-gray-800 mx-2"></div>
+          
+          <button type="button" onclick="window.location.href='login.html'" class="bg-accent border-2 border-accent text-white hover:bg-transparent hover:text-accent px-6 py-2.5 text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-2">
+            <span>Login</span>
+            <i class="fas fa-arrow-right text-[10px] rtl:rotate-180"></i>
+          </button>
+          
+          <a href="register.html" class="bg-transparent border-2 border-gray-300 dark:border-gray-700 text-brand-dark dark:text-brand-light hover:border-accent dark:hover:border-accent hover:text-accent dark:hover:text-accent px-6 py-2.5 text-xs uppercase tracking-wider font-medium transition-all duration-300 flex items-center gap-2">
+            <span>Register</span>
+            <i class="fas fa-arrow-right text-[10px] rtl:rotate-180"></i>
+          </a>
+        </div>
+
+        <div class="xl:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-900 dark:text-brand-light hover:text-accent focus:outline-none transition duration-300">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path id="close-icon" class="hidden" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden xl:hidden bg-brand-light dark:bg-[#1E293B] border-b border-gray-200 dark:border-gray-800 shadow-2xl">
+      <div class="px-6 pt-4 pb-8 flex flex-col gap-0 max-h-[calc(100vh-90px)] overflow-y-auto">
+
+        <div class="border-b border-gray-100 dark:border-white/5">
+          <button id="mobile-home-dropdown" class="w-full flex items-center justify-between py-4 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300">
+            <span class="text-xs uppercase tracking-widest font-medium">Home</span>
+            <i class="fas fa-plus text-xs transition-transform duration-300" id="mobile-home-icon"></i>
+          </button>
+          <div id="mobile-home-menu" class="hidden pb-4 flex flex-col gap-3 ps-4 border-s-2 border-accent/20 ms-2">
+            <a href="index.html" class="block text-sm font-medium text-gray-500 hover:text-accent dark:text-gray-400 transition duration-300 uppercase tracking-wider">01. Home Page</a>
+            <a href="home-2.html" class="block text-sm font-medium text-gray-500 hover:text-accent dark:text-gray-400 transition duration-300 uppercase tracking-wider">02. Home Page</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="block py-4 border-b border-gray-100 dark:border-white/5 text-accent hover:text-accent transition duration-300 text-xs uppercase tracking-widest font-medium">About</a>
+        <a href="books.html" class="block py-4 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300 text-xs uppercase tracking-widest font-medium">Books</a>
+        <a href="stationery.html" class="block py-4 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300 text-xs uppercase tracking-widest font-medium">Stationery</a>
+        <a href="book_categories.html" class="block py-4 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300 text-xs uppercase tracking-widest font-medium">Book Categories</a>
+        <a href="contact.html" class="block py-4 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300 text-xs uppercase tracking-widest font-medium">Contact</a>
+
+
+
+        <div class="pt-8 flex flex-col gap-4">
+          <button type="button" onclick="window.location.href='login.html'" class="flex items-center justify-center w-full bg-accent border-2 border-accent text-white hover:bg-transparent hover:text-accent px-4 py-3.5 font-semibold uppercase tracking-widest text-center transition duration-300 text-xs gap-2">
+            <span>Login</span>
+            <i class="fas fa-arrow-right text-[10px] rtl:rotate-180"></i>
+          </button>
+          
+          <a href="register.html" class="flex items-center justify-center w-full bg-transparent border-2 border-gray-300 dark:border-gray-700 text-brand-dark dark:text-brand-light hover:border-accent dark:hover:border-accent hover:text-accent dark:hover:text-accent px-4 py-3.5 font-medium uppercase tracking-widest text-center transition duration-300 text-xs gap-2">
+            <span>Register</span>
+            <i class="fas fa-arrow-right text-[10px] rtl:rotate-180"></i>
+          </a>
+          
+          <div class="flex justify-between items-center pt-6 pb-2 border-t border-gray-100 dark:border-white/5 mt-4">
+            <button id="mobile-theme-toggle" class="bg-gray-100 dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-full px-4 py-2 transition-colors flex items-center text-xs font-medium uppercase tracking-widest">
+              <span class="dark:hidden flex items-center text-accent"><i class="fas fa-sun me-2"></i> Light Active</span>
+              <span class="hidden dark:flex items-center text-accent"><i class="fas fa-moon me-2"></i> Dark Active</span>
+            </button>
+            <button id="mobile-rtl-toggle" class="text-gray-400 hover:text-accent transition-colors flex items-center text-xs font-medium uppercase tracking-widest">
+              <i class="fas fa-language me-2 text-lg"></i> RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <main class="flex-grow flex flex-col pt-[90px]">
+    
+    <!-- Section 1: About Hero (50+ lines) -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-dark">
+      <div class="absolute inset-0 z-0">
+        <img src="images/about_hero.png" alt="Bookstore Exterior" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+      </div>
+      
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-600/30 rounded-full blur-3xl animate-pulse z-0"></div>
+      
+      <div class="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+        <span class="text-amber-500 font-bold uppercase tracking-[0.3em] text-sm mb-4 block">About Us</span>
+        
+        <h1 class="text-5xl md:text-7xl font-serif font-bold text-brand-light mb-8 leading-tight">
+          A Chapter in <br/> <span class="text-amber-500 italic">Our Journey</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+          More than just a bookstore, we are a community hub for dreamers, thinkers, and writers. Discover the story behind the shelves.
+        </p>
+        
+        <div class="flex justify-center mt-12">
+          <a href="#our-story" class="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-brand-dark hover:border-white transition-all duration-300 animate-bounce">
+            <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-white/10 text-center">
+          <div>
+            <h4 class="text-3xl font-serif font-bold text-white mb-2">2010</h4>
+            <p class="text-xs text-gray-400 font-medium uppercase tracking-widest">Year Established</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-serif font-bold text-white mb-2">35k+</h4>
+            <p class="text-xs text-gray-400 font-medium uppercase tracking-widest">Books Sold</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-serif font-bold text-white mb-2">120+</h4>
+            <p class="text-xs text-gray-400 font-medium uppercase tracking-widest">Local Authors</p>
+          </div>
+          <div>
+            <h4 class="text-3xl font-serif font-bold text-white mb-2">100%</h4>
+            <p class="text-xs text-gray-400 font-medium uppercase tracking-widest">Independent</p>
+          </div>
+        </div>
+        
+        <div class="mt-16 max-w-3xl mx-auto bg-black/40 backdrop-blur-md border border-white/10 p-6 rounded-2xl">
+          <div class="flex items-center justify-center gap-2 text-amber-500 mb-3">
+            <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+          </div>
+          <p class="text-gray-300 italic">"The Bookery is the beating heart of our local literary community. A truly magical space."</p>
+          <p class="text-white text-xs font-bold uppercase tracking-widest mt-3">- The Daily Chronicle</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Our History (70+ lines) -->
+    <section id="our-story" class="py-24 bg-white dark:bg-[#1E293B] relative overflow-hidden border-t border-gray-100 dark:border-gray-800">
+      <div class="absolute -right-40 -top-40 w-96 h-96 bg-brand-light dark:bg-[#111827] rounded-full -z-10"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="w-full lg:w-1/2">
+            <div class="inline-flex items-center px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-full mb-6 border border-amber-200 dark:border-amber-800">
+              <i class="fas fa-history text-amber-600 mr-2 text-sm"></i>
+              <span class="text-xs uppercase tracking-widest font-bold text-amber-800 dark:text-amber-500">The Beginning</span>
+            </div>
+            
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark dark:text-brand-light mb-6 leading-tight">
+              From a dusty attic <br/>to a <span class="text-amber-600 italic">literary sanctuary.</span>
+            </h2>
+            
+            <p class="text-lg text-brand-muted dark:text-gray-400 mb-6 leading-relaxed">
+              Our story began in 2010 when our founders discovered an abandoned collection of first editions in a Victorian attic. Realizing the magic these forgotten stories held, they decided to create a space where books could be celebrated, not just sold.
+            </p>
+            
+            <div class="space-y-8 mt-10 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 dark:before:via-gray-700 before:to-transparent">
+              <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-brand-dark bg-amber-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  <i class="fas fa-box-open"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-brand-light dark:bg-[#111827] shadow-sm">
+                  <div class="flex items-center justify-between space-x-2 mb-1">
+                    <div class="font-bold text-brand-dark dark:text-brand-light">The Discovery</div>
+                    <time class="text-amber-600 text-xs font-bold">2010</time>
+                  </div>
+                  <div class="text-brand-muted dark:text-gray-400 text-sm">Finding the initial collection of 500 vintage books.</div>
+                </div>
+              </div>
+              
+              <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-brand-dark bg-amber-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  <i class="fas fa-store"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-brand-light dark:bg-[#111827] shadow-sm">
+                  <div class="flex items-center justify-between space-x-2 mb-1">
+                    <div class="font-bold text-brand-dark dark:text-brand-light">Doors Open</div>
+                    <time class="text-amber-600 text-xs font-bold">2012</time>
+                  </div>
+                  <div class="text-brand-muted dark:text-gray-400 text-sm">Opening our first 500 sq ft physical storefront.</div>
+                </div>
+              </div>
+              
+              <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-brand-dark bg-amber-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  <i class="fas fa-expand"></i>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-brand-light dark:bg-[#111827] shadow-sm">
+                  <div class="flex items-center justify-between space-x-2 mb-1">
+                    <div class="font-bold text-brand-dark dark:text-brand-light">The Expansion</div>
+                    <time class="text-amber-600 text-xs font-bold">2018</time>
+                  </div>
+                  <div class="text-brand-muted dark:text-gray-400 text-sm">Moving to our current 3-story flagship location.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="w-full lg:w-1/2 relative">
+            <div class="absolute inset-0 bg-amber-600/10 transform rotate-3 rounded-[2rem] -z-10"></div>
+            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white dark:border-brand-dark">
+              <img src="images/about_history.png" alt="Vintage Bookstore History" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-brand-dark/20 mix-blend-multiply"></div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Our Philosophy (70+ lines) -->
+    <section class="py-24 bg-brand-light dark:bg-[#111827] border-t border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+          <span class="text-amber-600 font-bold uppercase tracking-widest text-sm mb-2 block">Our Philosophy</span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark dark:text-brand-light mb-4">
+            What We Stand For
+          </h2>
+          <p class="text-brand-muted dark:text-gray-400 max-w-2xl mx-auto">
+            At The Bookery, we operate on a set of core principles that guide everything from our book selection to how we serve our community.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-xl group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Diverse Voices</h3>
+            <p class="text-brand-muted dark:text-gray-400 text-sm leading-relaxed">
+              We actively source books from marginalized authors, translated works, and independent presses to ensure our shelves reflect the beautiful diversity of our world.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-xl group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Sustainability</h3>
+            <p class="text-brand-muted dark:text-gray-400 text-sm leading-relaxed">
+              Our packaging is 100% recyclable, and we partner with environmental initiatives to plant a tree for every 10 books sold in our store or online.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-xl group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Community First</h3>
+            <p class="text-brand-muted dark:text-gray-400 text-sm leading-relaxed">
+              We host free reading programs for local schools, provide meeting spaces for book clubs, and champion local authors through dedicated shelf space.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-xl group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Curation with Care</h3>
+            <p class="text-brand-muted dark:text-gray-400 text-sm leading-relaxed">
+              No algorithms here. Every book on our display tables is hand-picked by a staff member who has read it, loved it, and wants to share it.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="mt-16 bg-amber-600 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+          <div class="text-white max-w-2xl">
+            <h3 class="text-2xl md:text-3xl font-serif font-bold mb-3">Join our community newsletter</h3>
+            <p class="text-amber-100">Get weekly updates on new arrivals, staff picks, and upcoming events.</p>
+          </div>
+          <div class="w-full md:w-auto flex-shrink-0">
+            <div class="flex w-full max-w-md">
+              <input type="email" placeholder="Your email address" class="px-6 py-4 rounded-l-full w-full focus:outline-none text-brand-dark">
+              <button class="bg-brand-dark text-white px-8 py-4 rounded-r-full font-bold uppercase tracking-widest text-xs hover:bg-black transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Section 4: The Team (70+ lines) -->
+    <section class="py-24 bg-white dark:bg-[#1E293B] border-t border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          
+          <div class="w-full lg:w-1/2 relative">
+            <div class="absolute inset-0 bg-brand-light dark:bg-[#111827] rounded-[3rem] transform -rotate-3 -z-10 border border-gray-100 dark:border-gray-800"></div>
+            <img src="images/about_team.png" alt="Our Team" class="w-full rounded-[3rem] shadow-2xl relative z-10 border-4 border-white dark:border-brand-dark object-cover h-[600px]">
+            
+
+          </div>
+          
+          <div class="w-full lg:w-1/2">
+            <span class="text-amber-600 font-bold uppercase tracking-widest text-sm mb-2 block">Meet The People</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark dark:text-brand-light mb-6">
+              The faces behind <br/>the recommendations.
+            </h2>
+            <p class="text-lg text-brand-muted dark:text-gray-400 mb-10 leading-relaxed">
+              We aren't an algorithm. We're a team of voracious readers, writers, and artists who genuinely care about connecting you with your next favorite story.
+            </p>
+            
+            <div class="space-y-8">
+              
+              <div class="flex gap-6 items-start">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden border-2 border-amber-600">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-1">Sarah Jenkins</h4>
+                  <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Head of Fiction / Founder</p>
+                  <p class="text-sm text-brand-muted dark:text-gray-400">"I'm always on the hunt for literary fiction that breaks my heart and puts it back together again. Ask me about contemporary women's fiction."</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-6 items-start">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden border-2 border-gray-300 dark:border-gray-700">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marcus" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-1">Marcus Thorne</h4>
+                  <p class="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Sci-Fi & Fantasy Specialist</p>
+                  <p class="text-sm text-brand-muted dark:text-gray-400">"If it has a map in the front matter, I've probably read it. I love epic world-building, hard sci-fi, and complex magic systems."</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-6 items-start">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden border-2 border-gray-300 dark:border-gray-700">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Elena" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-1">Elena Rostova</h4>
+                  <p class="text-xl text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Stationery & Art Director</p>
+                  <p class="text-sm text-brand-muted dark:text-gray-400">"I source our fountain pens, inks, and journals. I believe that writing by hand is a sacred ritual that deserves the finest tools."</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Cafe & Ambiance (50+ lines) -->
+    <section class="py-24 bg-brand-light dark:bg-[#111827] border-t border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-white dark:bg-brand-dark rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 flex flex-col md:flex-row">
+          
+          <div class="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+            <div class="w-16 h-16 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center text-amber-600 text-2xl mb-6">
+              <i class="fas fa-coffee"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark dark:text-brand-light mb-4">
+              The Reading Room Cafe
+            </h2>
+            
+            <p class="text-brand-muted dark:text-gray-400 mb-8 leading-relaxed">
+              What pairs better with a good book than a great cup of coffee? Located on our second floor, The Reading Room offers artisanal espresso, loose-leaf teas, and fresh pastries baked locally every morning. 
+            </p>
+            
+            <p class="text-brand-muted dark:text-gray-400 mb-8 leading-relaxed">
+              Settle into one of our plush leather armchairs, listen to the soft jazz playing in the background, and escape into your new adventure.
+            </p>
+            
+            <div>
+              <h4 class="font-bold text-brand-dark dark:text-brand-light text-sm uppercase tracking-widest mb-4">Cafe Hours</h4>
+              <ul class="space-y-2 text-sm text-brand-muted dark:text-gray-400">
+                <li class="flex justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+                  <span>Monday - Friday</span>
+                  <span class="font-bold text-brand-dark dark:text-brand-light">7:00 AM - 8:00 PM</span>
+                </li>
+                <li class="flex justify-between border-b border-gray-100 dark:border-gray-800 pb-2">
+                  <span>Saturday</span>
+                  <span class="font-bold text-brand-dark dark:text-brand-light">8:00 AM - 9:00 PM</span>
+                </li>
+                <li class="flex justify-between pb-2">
+                  <span>Sunday</span>
+                  <span class="font-bold text-brand-dark dark:text-brand-light">9:00 AM - 6:00 PM</span>
+                </li>
+              </ul>
+            </div>
+            
+            <a href="#" class="inline-block mt-8 font-bold text-amber-600 uppercase tracking-widest text-sm hover:text-brand-dark dark:hover:text-brand-light transition-colors">
+              View Cafe Menu &rarr;
+            </a>
+          </div>
+          
+          <div class="w-full md:w-1/2 relative min-h-[400px]">
+            <img src="images/about_cafe.png" alt="Bookstore Cafe" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+</main>
+
+  <footer class="bg-brand-dark text-brand-light pt-24 pb-12 mt-auto border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-6 inline-flex hover:opacity-80 transition-opacity">
+            <i class="fas fa-book-open text-amber-600 text-3xl"></i>
+            <div class="flex flex-col">
+              <span class="text-3xl font-serif font-bold tracking-tight text-brand-light">The <span class="text-amber-600 italic">Bookery</span></span>
+            </div>
+          </a>
+          <p class="text-brand-muted mb-8 font-medium leading-relaxed text-base">
+            Providing top-tier books and stationery to keep your imagination flowing. Come visit our cozy store or order online.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="w-12 h-12 border border-white/20 text-brand-light hover:border-accent hover:text-accent flex items-center justify-center transition-all duration-300 rounded-sm">
+              <i class="fab fa-facebook-f text-base"></i>
+            </a>
+            <a href="#" class="w-12 h-12 border border-white/20 text-brand-light hover:border-accent hover:text-accent flex items-center justify-center transition-all duration-300 rounded-sm">
+              <i class="fab fa-instagram text-base"></i>
+            </a>
+            <a href="#" class="w-12 h-12 border border-white/20 text-brand-light hover:border-accent hover:text-accent flex items-center justify-center transition-all duration-300 rounded-sm">
+              <i class="fab fa-twitter text-base"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm uppercase tracking-[0.2em] font-medium mb-8 text-brand-light">Quick Links</h4>
+          <ul class="flex flex-col gap-5">
+            <li><a href="index.html" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Home</a></li>
+            <li><a href="about.html" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">About Us</a></li>
+            <li><a href="books.html" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Books</a></li>
+            <li><a href="stationery.html" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Stationery</a></li>
+            <li><a href="book_categories.html" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Categories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm uppercase tracking-[0.2em] font-medium mb-8 text-brand-light">Our Services</h4>
+          <ul class="flex flex-col gap-5">
+            <li><a href="#" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Special Orders</a></li>
+            <li><a href="#" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Gift Wrapping</a></li>
+            <li><a href="#" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Book Club</a></li>
+            <li><a href="#" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Custom Engraving</a></li>
+            <li><a href="#" class="text-base text-brand-muted hover:text-accent transition-colors duration-300 font-medium">Author Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm uppercase tracking-[0.2em] font-medium mb-8 text-brand-light">Contact Us</h4>
+          <ul class="flex flex-col gap-6">
+            <li class="flex items-start gap-4">
+              <i class="fas fa-map-marker-alt text-accent mt-1 text-base shrink-0"></i>
+              <span class="text-base text-brand-muted font-medium">123 Literary Lane, Book District</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fas fa-phone text-accent text-base shrink-0"></i>
+              <a href="tel:+442071234567" class="text-base text-brand-muted hover:text-accent transition-colors font-medium">+44 20 7123 4567</a>
+            </li>
+            <li class="flex items-center gap-4">
+              <i class="fas fa-envelope text-accent text-base shrink-0"></i>
+              <a href="mailto:hello@thebookery.com" class="text-base text-brand-muted hover:text-accent transition-colors font-medium">hello@thebookery.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-brand-muted text-sm tracking-wider uppercase mb-4 md:mb-0 font-medium">
+          © 2026 The Bookery. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="login.html" class="text-brand-muted hover:text-accent text-sm tracking-wider uppercase font-medium transition-colors duration-300">Staff Login</a>
+          <a href="#" class="text-brand-muted hover:text-accent text-sm tracking-wider uppercase font-medium transition-colors duration-300">Privacy</a>
+          <a href="#" class="text-brand-muted hover:text-accent text-sm tracking-wider uppercase font-medium transition-colors duration-300">Terms</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+    if (localStorage.getItem('theme') === 'dark') html.classList.add('dark');
+
+    // RTL Toggle
+    const rtlToggle = document.getElementById('rtl-toggle');
+    const mobileRtlToggle = document.getElementById('mobile-rtl-toggle');
+
+    function toggleRTL() {
+      if (html.getAttribute('dir') === 'rtl') {
+        html.removeAttribute('dir');
+        localStorage.setItem('direction', 'ltr');
+      } else {
+        html.setAttribute('dir', 'rtl');
+        localStorage.setItem('direction', 'rtl');
+      }
+    }
+
+    if (rtlToggle) rtlToggle.addEventListener('click', toggleRTL);
+    if (mobileRtlToggle) mobileRtlToggle.addEventListener('click', toggleRTL);
+    if (localStorage.getItem('direction') === 'rtl') html.setAttribute('dir', 'rtl');
+
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      // Fix for Flexbox fallback on mobile menu open
+      if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('flex');
+      } else {
+          mobileMenu.classList.remove('flex');
+      }
+    });
+
+    // Mobile Dropdowns Toggle Function
+    function setupMobileDropdown(dropdownId, menuId, iconId) {
+      const dropdown = document.getElementById(dropdownId);   
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+      
+      if(dropdown && menu && icon) {
+        dropdown.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          if(menu.classList.contains('hidden')) {
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+            menu.classList.remove('flex'); // Add this for flex compatibility
+          } else {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+            menu.classList.add('flex'); // Add this for flex compatibility
+          }
+        });
+      }
+    }
+
+    // Initialize dropdowns
+    setupMobileDropdown('mobile-home-dropdown', 'mobile-home-menu', 'mobile-home-icon');
+
+  </script>
+</body>
+</html>
