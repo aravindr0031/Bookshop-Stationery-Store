@@ -56,7 +56,7 @@
           </a>
         </div>
 
-        <div class="hidden xl:flex items-center justify-center flex-1 mx-8">
+                <div class="hidden xl:flex items-center justify-center flex-1 mx-8">
           <div class="flex items-center gap-8">
 
             <div class="relative group h-[90px] flex items-center">
@@ -75,7 +75,7 @@
                 </div>
               </div>
             </div>
-
+            
             <a href="about.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors py-2">
               About
               <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -85,6 +85,7 @@
               Books
               <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
+            
             <a href="stationery.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-accent hover:text-accent transition-colors py-2">
               Stationery
               <span class="absolute bottom-0 start-0 w-full h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -99,8 +100,6 @@
               Contact
               <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
-
-
 
           </div>
         </div>
@@ -149,7 +148,7 @@
     <div id="mobile-menu" class="hidden xl:hidden bg-brand-light dark:bg-[#1E293B] border-b border-gray-200 dark:border-gray-800 shadow-2xl">
       <div class="px-6 pt-4 pb-8 flex flex-col gap-0 max-h-[calc(100vh-90px)] overflow-y-auto">
 
-        <div class="border-b border-gray-100 dark:border-white/5">
+                <div class="border-b border-gray-100 dark:border-white/5">
           <button id="mobile-home-dropdown" class="w-full flex items-center justify-between py-4 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300">
             <span class="text-xs uppercase tracking-widest font-medium">Home</span>
             <i class="fas fa-plus text-xs transition-transform duration-300" id="mobile-home-icon"></i>
@@ -199,6 +198,7 @@
     <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-dark">
       <div class="absolute inset-0 z-0">
         <img src="images/stationery_showcase.png" alt="Stationery Hero" class="w-full h-full object-cover opacity-40">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
       </div>
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-600/30 rounded-full blur-3xl animate-pulse z-0"></div>
@@ -297,58 +297,49 @@
     <!-- Section 3: Journals (70+) -->
     <section class="py-24 bg-brand-light dark:bg-[#111827] relative overflow-hidden border-t border-gray-100 dark:border-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-          <div class="w-full lg:w-1/2 relative">
-            <div class="absolute inset-0 bg-amber-600/10 transform -rotate-3 rounded-[2rem] -z-10"></div>
-            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white dark:border-brand-dark">
-              <img src="images/stationery_notebooks.png" alt="Journals" class="w-full h-[500px] object-cover">
-            </div>
+        
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-full mb-6 border border-amber-200 dark:border-amber-800">
+            <i class="fas fa-book-open text-amber-600 mr-2 text-sm"></i>
+            <span class="text-xs uppercase tracking-widest font-bold text-amber-800 dark:text-amber-500">Premium Paper</span>
           </div>
-          <div class="w-full lg:w-1/2">
-            <div class="inline-flex items-center px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-full mb-6 border border-amber-200 dark:border-amber-800">
-              <i class="fas fa-book-open text-amber-600 mr-2 text-sm"></i>
-              <span class="text-xs uppercase tracking-widest font-bold text-amber-800 dark:text-amber-500">Premium Paper</span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark dark:text-brand-light mb-6 leading-tight">
+            A home for your <span class="text-amber-600 italic">thoughts.</span>
+          </h2>
+          <p class="text-lg text-brand-muted dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            We take paper seriously. Our journals feature bleed-resistant, acid-free pages designed to handle the wettest fountain pen inks without ghosting or feathering.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300 group text-center flex flex-col items-center">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-journal-whills"></i>
             </div>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark dark:text-brand-light mb-6 leading-tight">
-              A home for your <br/><span class="text-amber-600 italic">thoughts.</span>
-            </h2>
-            <p class="text-lg text-brand-muted dark:text-gray-400 mb-6 leading-relaxed">
-              We take paper seriously. Our journals feature bleed-resistant, acid-free pages designed to handle the wettest fountain pen inks without ghosting or feathering.
-            </p>
-            <div class="space-y-6 mt-8">
-              <div class="flex gap-4 p-4 rounded-2xl hover:bg-white dark:hover:bg-brand-dark transition-colors border border-transparent hover:border-gray-100 dark:hover:border-gray-800">
-                <div class="w-12 h-12 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <i class="fas fa-journal-whills text-amber-600"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-2">Leather Journals</h4>
-                  <p class="text-brand-muted dark:text-gray-400 text-sm">Hand-bound Italian leather that ages beautifully, developing a unique patina over time.</p>
-                </div>
-              </div>
-              <div class="flex gap-4 p-4 rounded-2xl hover:bg-white dark:hover:bg-brand-dark transition-colors border border-transparent hover:border-gray-100 dark:hover:border-gray-800">
-                <div class="w-12 h-12 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <i class="fas fa-th text-amber-600"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-2">Dot Grid Notebooks</h4>
-                  <p class="text-brand-muted dark:text-gray-400 text-sm">Perfect for bullet journaling, featuring numbered pages and index sheets.</p>
-                </div>
-              </div>
-              <div class="flex gap-4 p-4 rounded-2xl hover:bg-white dark:hover:bg-brand-dark transition-colors border border-transparent hover:border-gray-100 dark:hover:border-gray-800">
-                <div class="w-12 h-12 rounded-full bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <i class="fas fa-sticky-note text-amber-600"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-2">Notepads & Stationery Sets</h4>
-                  <p class="text-brand-muted dark:text-gray-400 text-sm">Elegant letter-writing sets for correspondence that leaves a lasting impression.</p>
-                </div>
-              </div>
+            <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Leather Journals</h4>
+            <p class="text-brand-muted dark:text-gray-400 text-sm mb-6">Hand-bound Italian leather that ages beautifully, developing a unique patina over time.</p>
+            <a href="#" class="mt-auto text-amber-600 font-bold uppercase tracking-widest text-xs hover:text-brand-dark dark:hover:text-brand-light transition-colors">Explore <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+          
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300 group text-center flex flex-col items-center">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-th"></i>
             </div>
-            <a href="#" class="inline-flex items-center mt-6 font-bold text-amber-600 uppercase tracking-widest text-sm hover:text-brand-dark dark:hover:text-brand-light transition-colors group">
-              Browse Notebooks <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-            </a>
+            <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Dot Grid Notebooks</h4>
+            <p class="text-brand-muted dark:text-gray-400 text-sm mb-6">Perfect for bullet journaling, featuring numbered pages and index sheets.</p>
+            <a href="#" class="mt-auto text-amber-600 font-bold uppercase tracking-widest text-xs hover:text-brand-dark dark:hover:text-brand-light transition-colors">Explore <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+          
+          <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow duration-300 group text-center flex flex-col items-center">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/20 flex items-center justify-center mb-6 text-amber-600 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-sticky-note"></i>
+            </div>
+            <h4 class="text-xl font-bold text-brand-dark dark:text-brand-light mb-3">Notepads & Sets</h4>
+            <p class="text-brand-muted dark:text-gray-400 text-sm mb-6">Elegant letter-writing sets for correspondence that leaves a lasting impression.</p>
+            <a href="#" class="mt-auto text-amber-600 font-bold uppercase tracking-widest text-xs hover:text-brand-dark dark:hover:text-brand-light transition-colors">Explore <i class="fas fa-arrow-right ml-1"></i></a>
           </div>
         </div>
+        
       </div>
     </section>
 

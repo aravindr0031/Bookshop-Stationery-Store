@@ -56,7 +56,7 @@
           </a>
         </div>
 
-        <div class="hidden xl:flex items-center justify-center flex-1 mx-8">
+                <div class="hidden xl:flex items-center justify-center flex-1 mx-8">
           <div class="flex items-center gap-8">
 
             <div class="relative group h-[90px] flex items-center">
@@ -75,7 +75,7 @@
                 </div>
               </div>
             </div>
-
+            
             <a href="about.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-gray-900 dark:text-gray-100 hover:text-accent transition-colors py-2">
               About
               <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -90,6 +90,7 @@
               Stationery
               <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
+            
             <a href="book_categories.html" class="relative group text-xs uppercase tracking-[0.15em] font-medium text-accent hover:text-accent transition-colors py-2">
               Book Categories
               <span class="absolute bottom-0 start-0 w-full h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -99,8 +100,6 @@
               Contact
               <span class="absolute bottom-0 start-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
-
-
 
           </div>
         </div>
@@ -149,7 +148,7 @@
     <div id="mobile-menu" class="hidden xl:hidden bg-brand-light dark:bg-[#1E293B] border-b border-gray-200 dark:border-gray-800 shadow-2xl">
       <div class="px-6 pt-4 pb-8 flex flex-col gap-0 max-h-[calc(100vh-90px)] overflow-y-auto">
 
-        <div class="border-b border-gray-100 dark:border-white/5">
+                <div class="border-b border-gray-100 dark:border-white/5">
           <button id="mobile-home-dropdown" class="w-full flex items-center justify-between py-4 text-gray-900 dark:text-brand-light hover:text-accent transition duration-300">
             <span class="text-xs uppercase tracking-widest font-medium">Home</span>
             <i class="fas fa-plus text-xs transition-transform duration-300" id="mobile-home-icon"></i>
@@ -199,6 +198,7 @@
     <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-dark">
       <div class="absolute inset-0 z-0">
         <img src="images/book_categories_showcase.png" alt="Categories Hero" class="w-full h-full object-cover opacity-40">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
       </div>
       <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-600/30 rounded-full blur-3xl animate-pulse z-0"></div>
@@ -262,15 +262,57 @@
             </a>
           </div>
           <div class="w-full lg:w-1/2 relative">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="col-span-2 rounded-3xl overflow-hidden shadow-2xl relative h-64">
-                <img src="images/hero_image.png" alt="Fiction" class="w-full h-full object-cover">
+            <div class="grid grid-cols-2 gap-6">
+              <!-- Book 1 -->
+              <div class="bg-white dark:bg-brand-dark p-4 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-full h-56 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+                  <img src="images/trending_book.png" alt="Fiction Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div class="flex text-amber-400 text-[10px]">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="text-[10px] text-gray-500 ml-1">(128)</span>
+                </div>
+                <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">The Midnight Library</h3>
+                <div class="flex justify-between items-center mb-4 mt-auto">
+                  <span class="text-lg text-amber-600 font-bold">$24.99</span>
+                </div>
+                <div class="flex gap-2 w-full">
+                  <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                    <i class="fas fa-shopping-cart mr-1"></i> Add
+                  </button>
+                  <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                    Buy Now
+                  </button>
+                </div>
               </div>
-              <div class="rounded-3xl overflow-hidden shadow-xl relative h-48">
-                <img src="images/books_showcase.png" alt="Fiction" class="w-full h-full object-cover">
-              </div>
-              <div class="rounded-3xl overflow-hidden shadow-xl relative h-48">
-                <img src="images/book_categories_showcase.png" alt="Fiction" class="w-full h-full object-cover">
+
+              <!-- Book 2 -->
+              <div class="bg-white dark:bg-brand-dark p-4 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-full h-56 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+                  <img src="images/book_dune.png" alt="Fiction Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div class="flex text-amber-400 text-[10px]">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-[10px] text-gray-500 ml-1">(342)</span>
+                </div>
+                <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Dune</h3>
+                <div class="flex justify-between items-center mb-4 mt-auto">
+                  <span class="text-lg text-amber-600 font-bold">$19.99</span>
+                </div>
+                <div class="flex gap-2 w-full">
+                  <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                    <i class="fas fa-shopping-cart mr-1"></i> Add
+                  </button>
+                  <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -279,48 +321,136 @@
     </section>
 
     <!-- Section 3: Non-Fiction (70+) -->
-    <section class="py-24 bg-brand-light dark:bg-[#111827] relative overflow-hidden border-t border-gray-100 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-          <div class="w-full lg:w-1/2">
-            <div class="inline-flex items-center px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-full mb-6 border border-amber-200 dark:border-amber-800">
-              <i class="fas fa-brain text-amber-600 mr-2 text-sm"></i>
-              <span class="text-xs uppercase tracking-widest font-bold text-amber-800 dark:text-amber-500">Real World Ideas</span>
+    <section class="py-24 relative overflow-hidden border-t border-gray-100 dark:border-gray-800">
+      <div class="absolute inset-0 z-0">
+        <img src="images/about_history.png" alt="Non Fiction Background" class="w-full h-full object-cover opacity-30">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+        <div class="absolute inset-0 bg-brand-dark/80 dark:bg-brand-dark/90"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
+          <i class="fas fa-brain text-amber-500 mr-2 text-sm"></i>
+          <span class="text-xs uppercase tracking-widest font-bold text-amber-500">Real World Ideas</span>
+        </div>
+        
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+          Non-Fiction & <span class="text-amber-500 italic">Biography</span>
+        </h2>
+        
+        <p class="text-lg text-gray-300 max-w-3xl mb-12 leading-relaxed">
+          Expand your mind. From gripping historical accounts and insightful political analyses to inspiring memoirs and practical self-improvement guides, our non-fiction section provides endless opportunities for learning.
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+          <!-- NF Book 1 -->
+          <div class="bg-white dark:bg-brand-dark p-5 rounded-2xl shadow-xl border border-white/10 flex flex-col hover:-translate-y-2 transition-transform duration-300 text-left">
+            <div class="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+              <img src="images/book_atomic_habits.png" alt="Atomic Habits" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
             </div>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark dark:text-brand-light mb-6 leading-tight">
-              Non-Fiction & <span class="text-amber-600 italic">Biography</span>
-            </h2>
-            <p class="text-lg text-brand-muted dark:text-gray-400 mb-6 leading-relaxed">
-              Expand your mind. From gripping historical accounts and insightful political analyses to inspiring memoirs and practical self-improvement guides, our non-fiction section provides endless opportunities for learning.
-            </p>
-            <div class="grid grid-cols-2 gap-4 mt-8">
-              <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-amber-600 dark:hover:border-amber-600 hover:shadow-md transition-all group bg-white dark:bg-brand-dark">
-                <h4 class="font-bold text-brand-dark dark:text-brand-light mb-1 group-hover:text-amber-600">History</h4>
-                <p class="text-xs text-brand-muted dark:text-gray-400">Ancient civilizations to modern events.</p>
-              </a>
-              <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-amber-600 dark:hover:border-amber-600 hover:shadow-md transition-all group bg-white dark:bg-brand-dark">
-                <h4 class="font-bold text-brand-dark dark:text-brand-light mb-1 group-hover:text-amber-600">Biography</h4>
-                <p class="text-xs text-brand-muted dark:text-gray-400">The lives of extraordinary people.</p>
-              </a>
-              <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-amber-600 dark:hover:border-amber-600 hover:shadow-md transition-all group bg-white dark:bg-brand-dark">
-                <h4 class="font-bold text-brand-dark dark:text-brand-light mb-1 group-hover:text-amber-600">Science & Nature</h4>
-                <p class="text-xs text-brand-muted dark:text-gray-400">Exploring the universe and our planet.</p>
-              </a>
-              <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-amber-600 dark:hover:border-amber-600 hover:shadow-md transition-all group bg-white dark:bg-brand-dark">
-                <h4 class="font-bold text-brand-dark dark:text-brand-light mb-1 group-hover:text-amber-600">Business</h4>
-                <p class="text-xs text-brand-muted dark:text-gray-400">Economics, leadership, and finance.</p>
-              </a>
+            <div class="flex items-center mb-2">
+              <div class="flex text-amber-400 text-[10px]">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 ml-1">(4.9)</span>
             </div>
-            <a href="#" class="inline-flex items-center mt-8 font-bold text-amber-600 uppercase tracking-widest text-sm hover:text-brand-dark dark:hover:text-brand-light transition-colors group">
-              Browse All Non-Fiction <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-            </a>
+            <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Atomic Habits</h3>
+            <div class="flex justify-between items-center mb-4 mt-auto">
+              <span class="text-lg text-amber-600 font-bold">$15.99</span>
+            </div>
+            <div class="flex gap-2 w-full">
+              <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-shopping-cart mr-1"></i> Add
+              </button>
+              <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                Buy Now
+              </button>
+            </div>
           </div>
-          <div class="w-full lg:w-1/2 relative">
-            <div class="rounded-3xl overflow-hidden shadow-2xl relative h-[600px] border-8 border-white dark:border-brand-dark">
-              <img src="images/about_history.png" alt="Non Fiction" class="w-full h-full object-cover">
+          
+          <!-- NF Book 2 -->
+          <div class="bg-white dark:bg-brand-dark p-5 rounded-2xl shadow-xl border border-white/10 flex flex-col hover:-translate-y-2 transition-transform duration-300 text-left">
+            <div class="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+              <img src="images/book2.png" alt="Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+            </div>
+            <div class="flex items-center mb-2">
+              <div class="flex text-amber-400 text-[10px]">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 ml-1">(4.7)</span>
+            </div>
+            <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Sapiens</h3>
+            <div class="flex justify-between items-center mb-4 mt-auto">
+              <span class="text-lg text-amber-600 font-bold">$22.00</span>
+            </div>
+            <div class="flex gap-2 w-full">
+              <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-shopping-cart mr-1"></i> Add
+              </button>
+              <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                Buy Now
+              </button>
+            </div>
+          </div>
+          
+          <!-- NF Book 3 -->
+          <div class="bg-white dark:bg-brand-dark p-5 rounded-2xl shadow-xl border border-white/10 flex flex-col hover:-translate-y-2 transition-transform duration-300 text-left">
+            <div class="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+              <img src="images/book3.png" alt="Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+            </div>
+            <div class="flex items-center mb-2">
+              <div class="flex text-amber-400 text-[10px]">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 ml-1">(4.5)</span>
+            </div>
+            <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Thinking, Fast and Slow</h3>
+            <div class="flex justify-between items-center mb-4 mt-auto">
+              <span class="text-lg text-amber-600 font-bold">$18.50</span>
+            </div>
+            <div class="flex gap-2 w-full">
+              <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-shopping-cart mr-1"></i> Add
+              </button>
+              <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                Buy Now
+              </button>
+            </div>
+          </div>
+          
+          <!-- NF Book 4 -->
+          <div class="bg-white dark:bg-brand-dark p-5 rounded-2xl shadow-xl border border-white/10 flex flex-col hover:-translate-y-2 transition-transform duration-300 text-left">
+            <div class="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+              <img src="images/book4.png" alt="Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+            </div>
+            <div class="flex items-center mb-2">
+              <div class="flex text-amber-400 text-[10px]">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 ml-1">(4.8)</span>
+            </div>
+            <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Educated</h3>
+            <div class="flex justify-between items-center mb-4 mt-auto">
+              <span class="text-lg text-amber-600 font-bold">$14.00</span>
+            </div>
+            <div class="flex gap-2 w-full">
+              <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                <i class="fas fa-shopping-cart mr-1"></i> Add
+              </button>
+              <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
+        
+        <a href="#" class="inline-flex items-center mt-12 px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold uppercase tracking-widest text-sm rounded-full transition-colors shadow-lg">
+          Browse All Non-Fiction
+        </a>
       </div>
     </section>
 
@@ -329,9 +459,58 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row items-center gap-16">
           <div class="w-full lg:w-1/2 relative">
-            <div class="absolute inset-0 bg-amber-600/10 transform -rotate-3 rounded-[2rem] -z-10"></div>
-            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white dark:border-brand-dark">
-              <img src="images/hero_image.png" alt="Childrens Books" class="w-full h-[500px] object-cover">
+            <div class="grid grid-cols-2 gap-6">
+              <!-- Book 1 -->
+              <div class="bg-white dark:bg-brand-dark p-4 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-full h-56 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+                  <img src="images/trending_book.png" alt="Children Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div class="flex text-amber-400 text-[10px]">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="text-[10px] text-gray-500 ml-1">(89)</span>
+                </div>
+                <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Where the Wild Things Are</h3>
+                <div class="flex justify-between items-center mb-4 mt-auto">
+                  <span class="text-lg text-amber-600 font-bold">$12.50</span>
+                </div>
+                <div class="flex gap-2 w-full">
+                  <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                    <i class="fas fa-shopping-cart mr-1"></i> Add
+                  </button>
+                  <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+
+              <!-- Book 2 -->
+              <div class="bg-white dark:bg-brand-dark p-4 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                <div class="w-full h-56 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+                  <img src="images/book_project_hail_mary.png" alt="Children Book" class="w-full h-full object-cover">
+              <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white/90 dark:bg-black/50 text-gray-500 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-500 flex items-center justify-center shadow-sm backdrop-blur-sm transition-colors" title="Compare Product"><i class="fas fa-exchange-alt text-xs"></i></button>
+                </div>
+                <div class="flex items-center mb-2">
+                  <div class="flex text-amber-400 text-[10px]">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-[10px] text-gray-500 ml-1">(210)</span>
+                </div>
+                <h3 class="text-sm font-serif font-bold text-brand-dark dark:text-brand-light mb-1 line-clamp-1">Harry Potter and the Sorcerer's Stone</h3>
+                <div class="flex justify-between items-center mb-4 mt-auto">
+                  <span class="text-lg text-amber-600 font-bold">$14.99</span>
+                </div>
+                <div class="flex gap-2 w-full">
+                  <button class="flex-1 bg-brand-light dark:bg-[#111827] text-brand-dark dark:text-brand-light hover:bg-amber-600 hover:text-white py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                    <i class="fas fa-shopping-cart mr-1"></i> Add
+                  </button>
+                  <button class="flex-1 bg-amber-600 text-white hover:bg-amber-700 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center justify-center">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="w-full lg:w-1/2">
